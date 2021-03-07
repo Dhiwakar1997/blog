@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.timezone import now
+
 class Poems(models.Model):
     content=models.CharField(max_length=1000,blank=True,null=True)
     image_url=models.URLField(unique=True)

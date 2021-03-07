@@ -14,8 +14,10 @@ class PoemViews(APIView):
         data=queryset.extract()
         return Response(data=data)
 
-    @errorCatch
+    #@errorCatch
     def post(self,request,format=None):
+        print(request.data.dict())
         obj=Poems(**request.data.dict())
+        print(obj)
         obj.save()
         return Response('post done')
