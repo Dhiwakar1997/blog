@@ -8,7 +8,7 @@ from api.utils.decorators import errorCatch
 from api.models.poems.models import Poems
 
 class PoemViews(APIView):
-    @errorCatch #error carching decorator
+    #@errorCatch #error carching decorator
     def get(self,request,format=None):
         queryset=APIFeatures(Poems,request).filter().sort().paginate().limitFields()
         data=queryset.extract()
@@ -16,8 +16,6 @@ class PoemViews(APIView):
 
     #@errorCatch
     def post(self,request,format=None):
-        print(request.data.dict())
         obj=Poems(**request.data.dict())
-        print(obj)
         obj.save()
         return Response('post done')

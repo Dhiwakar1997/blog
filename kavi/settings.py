@@ -30,7 +30,7 @@ SECRET_KEY = '82b7f++=fi^1wp$02b&rlc&#xar!@l1ejs@la@)=712)+1zdd-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["34.121.171.197","34.121.171.197:3000"]
+ALLOWED_HOSTS = ["34.121.171.197","34.121.171.197:3000",'127.0.0.1']
 
 
 # Application definition
@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'corsheaders',
+
     'rest_framework',
     'rest_framework.authtoken',
     'api',
